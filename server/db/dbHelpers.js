@@ -1,8 +1,8 @@
 const db = require("./");
 
 const dbHelpers = {
-  getUser: (req, res) => {
-    qryStr = "SELECT * FROM Users";
+  getUser: (id, res) => {
+    const qryStr = `SELECT * FROM Users WHERE Users.UserId = ${id}`;
     db.query(qryStr, (err, data) => {
       if (err) {
         res.status(404).send(err);

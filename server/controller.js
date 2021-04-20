@@ -3,7 +3,7 @@ const dbHelpers = require("./db/dbHelpers.js");
 
 const controller = {
   getUser: (req, res) => {
-    dbHelpers.getUser(req, res);
+    dbHelpers.getUser(req.params.id, res);
   },
 };
 
