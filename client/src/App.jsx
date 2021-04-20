@@ -6,6 +6,7 @@ const App = () => {
   const getCurrentUser = () => {
     axios.get('http://127.0.0.1:3000/api/user')
       .then((data) => {
+        console.log(data)
         setCurrentUser(data.data);
       })
       // eslint-disable-next-line no-console

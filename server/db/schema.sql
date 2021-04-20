@@ -5,10 +5,12 @@ CREATE DATABASE crypto;
 USE crypto;
 
 CREATE TABLE Users(
-  name varchar(255),
+  UserId INT NOT NULL AUTO_INCREMENT,
+  Name varchar(255),
   USD int,
-  password varchar(255)
+  Password varchar(255),
+  PRIMARY KEY (UserId)
 );
 
 
-INSERT INTO Users (name, USD, password) VALUES ('michael', 10000, 'password');
+INSERT INTO Users (Name, USD, Password) VALUES ('michael', 10000, 'password');

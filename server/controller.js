@@ -1,8 +1,9 @@
 const data = require("../dummyData.js");
+const dbHelpers = require("./db/dbHelpers.js");
 
 const controller = {
   getUser: (req, res) => {
-    res.send(data);
+    dbHelpers.getUser(req, res);
   },
 };
 
