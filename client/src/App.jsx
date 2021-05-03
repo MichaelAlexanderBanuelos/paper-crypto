@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Homepage from './components/Homepage.jsx';
 import axios from 'axios';
 
 const App = () => {
@@ -18,7 +19,7 @@ const App = () => {
 
   return (
     <div>
-      hello!
+      <Homepage />
     </div>
   );
 };
