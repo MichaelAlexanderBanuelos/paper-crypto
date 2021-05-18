@@ -1,8 +1,9 @@
 import React from 'react';
+import Holdings from './Holdings.jsx';
 
 const Homepage = () => (
   <div>
-      this is the homepage
+    <Holdings />
   </div>
 );
 
