@@ -3,23 +3,18 @@ import Homepage from './components/Homepage.jsx';
 import axios from 'axios';
 
 const App = () => {
-  const [currentUser, setCurrentUser] = useState(0);
-  const getCurrentUser = () => {
-    axios.get('http://127.0.0.1:3000/api/user/1')
-      .then((data) => {
-        console.log(data);
-        setCurrentUser(data.data);
-      })
-      // eslint-disable-next-line no-console
-      .catch((err) => console.log(err));
-  };
+  const [reccomended, setReccomended] = useState([]);
+  const getReccomended = () => {
+    axios.get('localhost:3000/api/stocks')
+      .then((data) => setReccomended(data.data));
+  }
   useEffect(() => {
-    getCurrentUser();
+    getReccomended();
   }, []);
 
   return (
     <div>
-      <Homepage />
+      <Homepage reccomended={reccomended} />
     </div>
   );
 };

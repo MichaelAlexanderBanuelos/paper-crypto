@@ -1,5 +1,5 @@
 const axios = require("axios");
-const API_KEY = require("../config/stockKey.js");
+const API_KEY = require("../config/key.js");
 
 const config = {
   headers: {
