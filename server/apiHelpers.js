@@ -1,5 +1,5 @@
 const axios = require("axios");
-const API_KEY = require("../config/cryptoKey.js");
+const API_KEY = require("../config/stockKey.js");
 
 const config = {
   headers: {
@@ -8,20 +8,12 @@ const config = {
 };
 
 const apiHelpers = {
-  getCryptos: (req, res) => {
+  getStocks: (req, res) => {
     axios
       .get(
-        "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest",
-        config
+        "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo"
       )
-      .then((data) => {
-        const cleanData = data.data.data.map((crypto) => ({
-          name: crypto.name,
-          symbol: crypto.symbol,
-          price: crypto.quote.USD.price,
-        }));
-        res.send(cleanData);
-      });
+      .then((data) => res.send(data));
   },
 };
 
