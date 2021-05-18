@@ -1,5 +1,5 @@
 {
-  "name": "weight-watcher",
+  "name": "paper-stocks",
   "version": "1.0.0",
   "description": "Web application that will track your weight and help you reach your target weight with the help of calorie tracking",
   "main": "index.js",
