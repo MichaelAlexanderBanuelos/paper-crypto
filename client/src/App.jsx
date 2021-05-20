@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Homepage from './components/Homepage.jsx';
 import axios from 'axios';
+import Homepage from './components/Homepage.jsx';
 
 const App = () => {
   const [reccomended, setReccomended] = useState([]);

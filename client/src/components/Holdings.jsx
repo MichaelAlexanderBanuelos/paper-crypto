@@ -1,13 +1,12 @@
 import React from 'react';
+import HoldingsList from './HoldingsList';
 
-const Holdings = () => {
-    return (
-        <div>
-            <div>
-                <HoldingsList />
-            </div>
-        </div>
-    )
-};
+const Holdings = () => (
+  <div>
+    <div>
+      <HoldingsList holdings={[]} />
+    </div>
+  </div>
+);
 
-export default Holdings
+export default Holdings;

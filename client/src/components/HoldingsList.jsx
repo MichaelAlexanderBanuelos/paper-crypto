@@ -1,5 +1,6 @@
 import React from 'react';
-import Holding from './HoldingsList.jsx';
+import Holding from './Holdings';
+
 const HoldingsList = ({ holdings }) => (
   <div>
     {holdings.map((holding) => <Holding holdings={holdings} />)}
